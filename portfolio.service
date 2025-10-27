@@ -1,0 +1,20 @@
+a[Unit]
+Description=Dheeraj Portfolio Website
+Documentation=https://github.com/dheerajgajula02/portfolio_using_AI
+After=network.target
+
+[Service]
+Type=simple
+User=dheeraj
+WorkingDirectory=/home/dheeraj/Desktop/AI_portfolio/portfolio_v2
+Environment=NODE_ENV=production
+Environment=PORT=3010
+ExecStart=/usr/bin/npm start
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=portfolio
+
+[Install]
+WantedBy=multi-user.target
