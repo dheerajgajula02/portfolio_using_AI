@@ -471,7 +471,7 @@ export default function Home() {
             <p className="text-2xl font-black text-white">LET'S BUILD SOMETHING AMAZING</p>
           </div>
           <p className="mt-8 text-white font-bold">
-            © 2025 {personalInfo.name}. All rights reserved.
+            © 2025 {personalInfo.name}. Frontend built with AI 🤠.
           </p>
         </div>
       </footer>
