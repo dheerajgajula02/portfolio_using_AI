@@ -17,7 +17,7 @@ export default function Home() {
     {
       title: "Software Engineer – 1",
       company: "Versa Networks",
-      location: "Bangalore, India",
+      //location: "Bangalore, India",
       period: "June 2024 – Aug 2025",
       highlights: [
         "Developed REST APIs in GoLang and Cassandra serving 3000+ reqs/s with metrics through Prometheus and Grafana dashboards",
@@ -28,7 +28,7 @@ export default function Home() {
     {
       title: "Software Engineer – Intern",
       company: "Versa Networks",
-      location: "Bangalore, India",
+      //location: "Bangalore, India",
       period: "Feb 2024 – June 2024",
       highlights: [
         "Automated device usage tracking, reduced billing time from 7 days to under an hour",
