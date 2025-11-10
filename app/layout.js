@@ -1,4 +1,5 @@
 import './globals.css'
+import ThemeScript from './ThemeScript'
 
 export const metadata = {
   title: 'Dheeraj Gajula | Portfolio',
@@ -11,7 +12,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <ThemeScript />
+        {children}
+      </body>
     </html>
   )
 }

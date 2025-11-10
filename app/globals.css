@@ -6,3 +6,68 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* Theme variables and helper utilities inspired by the provided snippet */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f3f4f6;
+  --bg-card: #ffffff;
+  --text-primary: #000000;
+  --text-secondary: #666666;
+  --border-color: #000000;
+  --accent-green: #98FB98;
+  --user-font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+/* Dark theme */
+:root.dark, .dark {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --bg-card: #3d3d3d;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --border-color: #ffffff;
+  --accent-green: #4ade80;
+}
+
+body {
+  font-family: var(--user-font);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.prose { color: var(--text-primary); }
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6, .prose strong, .prose b { color: var(--text-primary); }
+.prose p, .prose li, .prose ul, .prose ol, .prose span, .prose blockquote, .prose code { color: var(--text-primary); }
+.prose a { color: var(--accent-green); }
+
+input, textarea, select {
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+input::placeholder, textarea::placeholder { color: var(--text-secondary); }
+
+.neo-shadow { box-shadow: 4px 4px 0px var(--border-color); }
+.neo-shadow-small { box-shadow: 2px 2px 0px var(--border-color); }
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+/* Utility to style cards consistently */
+.card {
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  border: 2px solid var(--border-color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
