@@ -7,8 +7,10 @@ export default function Home() {
     name: "Dheeraj Gajula",
     title: "Software & Network Engineer",
     email: "dheeraj.gajula@colorado.edu",
+    phone: "+1 303-520-8554",
     location: "Boulder, CO",
-    portfolio: "portfolio",
+    website: "index.dheerajg.me",
+    portfolio: "portfolio.dheerajg.me",
     linkedin: "www.linkedin.com/in/dheeraj-gajula-8776381ba",
     github: "github.com/dheerajgajula02"
   };
@@ -19,10 +21,11 @@ export default function Home() {
       company: "Versa Networks",
       //location: "Bangalore, India",
       period: "June 2024 – Aug 2025",
+      location: "Bangalore, India",
       highlights: [
-        "Developed REST APIs in GoLang and Cassandra serving 3000+ reqs/s with metrics through Prometheus and Grafana dashboards",
-        "Performed Quantitative and Qualitative analysis of virus total malicious feed data building data pipelines using Python and BigQuery with Mathematical Reinforcement model",
-        "Containerized multiple services using Docker and Kubernetes and deployed them in GCP"
+        "Developed REST APIs in GoLang and Cassandra that serve 3000+ reqs/s; reported metrics via Prometheus and built Grafana dashboards",
+        "Performed quantitative and qualitative analysis of VirusTotal malicious feed data; built Python/BigQuery pipelines and a mathematical reinforcement model to predict results",
+        "Containerized services with Docker and Kubernetes and deployed to GCP"
       ]
     },
     {
@@ -30,22 +33,24 @@ export default function Home() {
       company: "Versa Networks",
       //location: "Bangalore, India",
       period: "Feb 2024 – June 2024",
+      location: "Bangalore, India",
       highlights: [
-        "Automated device usage tracking, reduced billing time from 7 days to under an hour",
-        "Analyzed inconsistent logs, built anomaly detection systems and StateMachines to track device states",
-        "Used MongoDB and Python Data modelling to process hierarchical data with insights on Prometheus and Grafana",
-        "Used Flask and FastAPI for services, Docker and Docker compose for deployment"
+        "Automated device-usage tracking, reducing billing time from 7 days to under an hour",
+        "Analyzed inconsistent logs and built anomaly-detection systems and state machines to track device states",
+        "Modeled hierarchical director logs with MongoDB and Python and surfaced insights via Prometheus/Grafana",
+        "Built services with Flask and FastAPI and deployed using Docker / Docker Compose"
       ]
     }
   ];
 
   const education = [
     {
-      degree: "Master's in Computer Science",
+      degree: "Master's in Computer Science — Network Engineering",
       school: "University of Colorado – Boulder",
       location: "Boulder, CO",
       period: "Aug 2025 – May 2027",
-      coursework: ["Enterprise Networks", "Network Systems", "Machine Learning"]
+      gpa: "3.8/4.0",
+      coursework: ["Enterprise Networks", "Network Systems","Machine Learning"]
     },
     {
       degree: "Bachelor's in Computer Science and Engineering",
@@ -53,48 +58,73 @@ export default function Home() {
       location: "Bangalore, India",
       period: "Nov 2020 – May 2024",
       gpa: "3.76/4.0",
-      coursework: ["Data Structures & Algorithms", "Database Systems", "Operating Systems", "Computer Networks", "Cloud Computing", "Machine Learning", "Deep Learning", "NLP", "Computer Vision"]
+      coursework: [
+        "Data structures and algorithms",
+        "Database systems",
+        "Operating systems",
+        "Computer Networks",
+        "Cloud Computing",
+        "Automata Theory",
+        "Software Engineering",
+        "Machine Learning",
+        "Deep Learning",
+        "NLP",
+        "Computer Vision"
+      ]
     }
   ];
 
   const projects = [
     {
+      name: "Enterprise Network Lab",
+      tech: "STP, DHCP, EIGRP, RIP, Wireshark, Wireless, VLANs",
+      period: "Sept 2025 – Present",
+      description: [
+        "Built fault-tolerant Cisco enterprise networks with VLANs, trunking, STP/RSTP, and HSRP for redundancy",
+        "Configured wireless LANs, DHCP, NAT/PAT, and inter-VLAN routing for Internet and internal connectivity",
+        "Implemented RIP, EIGRP, and OSPF multi-area routing with redistribution and convergence tuning",
+        "Validated network behavior using Wireshark, ping/trace, and IOS tools for routing and failover"
+      ]
+    },
+    {
+      name: "Advanced Enterprise Networks",
+      tech: "OSPF, RSVP-TE, MPLS, IPsec, NAT, IPv6",
+      period: "Fall 2025",
+      description: [
+        "Designed multi-site enterprise and ISP-style networks with MPLS and RSVP-TE tunnels and bandwidth guarantees",
+        "Integrated IPv4/IPv6 connectivity with IPsec-encrypted tunnels and OSPFv2/v3 routing",
+        "Configured NAT, stateful NAT, and IPv4–IPv6 translation (NAT-PT) where required",
+        "Ensured fault tolerance, redundancy, and secure communication across multiple sites"
+      ]
+    },
+    {
       name: "Network Applications",
       tech: "C++, Network Programming",
       period: "Sept 2025 – Present",
       description: [
-        "Developed multi-threaded TCP/UDP-based HTTP Web Server in C++ with GET/HEAD/POST request parsing and UDP client/server file transfer system with FTP-like commands",
-        "Implemented persistent connections with pipelining and timeout handling, serving multiple file types with correct Content-Type headers",
-        "Built concurrent request processing using threading/forking for HTTP with reliable transfer mechanisms (Stop-and-Wait, Go-Back-N) for UDP"
+        "Built a multi-threaded TCP/UDP HTTP web server and HTTP caching proxy in C/C++ with request parsing and hostname validation",
+        "Implemented persistent connections, pipelining, MD5-based page caching, and reliable UDP transfers (Stop-and-Wait, Go-Back-N)",
+        "Added concurrent request processing via threading/forking, background prefetching, and MD5 hash-based caching",
+        "Developed a DFS in C with chunking, redundancy, and client/server commands (list/get/put)"
       ]
     },
     {
-      name: "Enterprise Network Lab",
-      tech: "STP, DHCP Server, EIGRP, RIP, Wireshark, Wireless, VLANs",
+      name: "Home Lab",
+      tech: "Linux, Virtualization, WireGuard, Docker, Cloudflare",
       period: "Sept 2025 – Present",
       description: [
-        "Configured Cisco enterprise networks with VLANs, trunking (802.1Q/ISL), VTP, STP/RSTP, and HSRP-based gateway redundancy",
-        "Deployed wireless LANs with DHCP, multi-SSID VLAN segmentation; implemented NAT/PAT for Internet, DMZ, and VLAN address translation",
-        "Implemented routing protocols (RIP v1/v2, EIGRP, OSPF multi-area) with redistribution, VRF isolation, DR/BDR elections, and summarization"
-      ]
-    },
-    {
-      name: "Schizo AI",
-      tech: "Python, TensorFlow, Explainable AI",
-      period: "2024",
-      description: [
-        "Presented undergrad thesis at International Conference for Advanced Data Driven Intelligence",
-        "Explored explainable AI models like Lime, SHAP, CAM in the context of Schizophrenia diagnosis"
+        "Maintain a home lab (https://index.dheerajg.me) hosting multiple services with WireGuard access and Docker-based deployments",
+        "Use backups and virtualization to ensure redundancy and safe experimentation"
       ]
     }
   ];
 
   const skills = {
-    "Languages": ["GoLang", "Python", "C/C++", "SQL", "Bash"],
-    "Frameworks & Database": ["Flask", "FastAPI", "Postgres", "BigQuery", "Cassandra", "MongoDB", "Prometheus", "FireBase"],
-    "Developer Tools": ["Git", "Docker", "Kubernetes", "GCP", "Grafana", "AWS", "NGINX", "Hugging Face", "wireshark"],
-    "Libraries": ["pandas", "NumPy", "Matplotlib", "TensorFlow", "OpenCV", "scikit-learn", "Seaborn", "NLTK"],
-    "Networking": ["TCP/IP", "UDP", "HTTP/HTTPS", "DNS", "DHCP", "BGP", "OSPF", "EIGRP", "RIP", "VLANs", "NAT/PAT", "Sockets", "protocol design"]
+    "Concepts and protocols": ["TCP/IP", "IPv4", "IPv6", "ARP", "ICMP", "STP", "DNS", "DHCP", "NAT", "RIP", "OSPF", "SNMP", "MPLS", "GNS3"],
+    "Languages": ["GoLang", "Python", "C/C++", "SQL (Postgres)", "Bash"],
+    "Frameworks & Database": ["Flask", "FastAPI", "Postgres", "BigQuery", "Cassandra", "MongoDB", "Prometheus", "Firebase"],
+    "Developer Tools": ["Git", "Docker", "Docker Compose", "Kubernetes", "GCP", "Grafana", "AWS", "NGINX", "WireGuard"],
+    "Libraries": ["pandas", "NumPy", "Matplotlib", "TensorFlow", "OpenCV", "scikit-learn", "Seaborn", "NLTK"]
   };
 
   const achievements = [
@@ -155,6 +185,20 @@ export default function Home() {
                 </div>
               </a>
             ))}
+          </div>
+
+          {/* Resume button */}
+          <div className="mt-6 flex justify-center md:justify-start">
+            <a
+              href="/dheeraj_gajula_resume_NE.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+              className="inline-flex items-center gap-3 bg-black border-4 border-[#7B3FF2] px-6 py-3 transform hover:-translate-y-1 hover:shadow-[8px_8px_0px_rgba(123,63,242,1)] transition-all duration-200"
+            >
+              <ExternalLink className="w-5 h-5 text-[#4B0082]" />
+              <span className="font-bold text-white">Download Resume</span>
+            </a>
           </div>
         </div>
       </section>
