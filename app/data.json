@@ -1,0 +1,141 @@
+{
+  "personalInfo": {
+    "name": "Dheeraj Gajula",
+    "title": "Software & Network Engineer",
+    "email": "dheeraj.gajula@colorado.edu",
+    "phone": "+1 303-520-8554",
+    "location": "Boulder, CO",
+    "website": "index.dheerajg.me",
+    "portfolio": "portfolio.dheerajg.me",
+    "linkedin": "www.linkedin.com/in/dheeraj-gajula-8776381ba",
+    "github": "github.com/dheerajgajula02",
+    "resumeLink": "/dheeraj_gajula_resume_NE.pdf"
+  },
+  "intro": {
+    "headline": "Bridging powerful infrastructure with modern software solutions.",
+    "aboutMe": "I am a dedicated Network and Software Engineer specializing in scalable enterprise network design, backend platform engineering, and comprehensive automation. Leveraging extensive hands-on experience, I design fault-tolerant systems and robust protocols alongside creating modern, concurrent, microservice-based software. I am highly passionate about solving complex bridging problems, optimizing traffic paths across the web, and developing responsive systems that seamlessly support highly distributed infrastructure. Drawing from both standard OSI modeling and robust software logic, I constantly try to merge system efficiency with modern engineering standards to build reliable digital foundations."
+  },
+  "experience": [
+    {
+      "title": "Software Engineer – 1",
+      "company": "Versa Networks",
+      "period": "June 2024 – Aug 2025",
+      "location": "Bangalore, India",
+      "highlights": [
+        "Developed REST APIs in GoLang and Cassandra that serve 3000+ reqs/s; reported metrics via Prometheus and built Grafana dashboards",
+        "Performed quantitative and qualitative analysis of VirusTotal malicious feed data; built Python/BigQuery pipelines and a mathematical reinforcement model to predict results",
+        "Containerized services with Docker and Kubernetes and deployed to GCP"
+      ]
+    },
+    {
+      "title": "Software Engineer – Intern",
+      "company": "Versa Networks",
+      "period": "Feb 2024 – June 2024",
+      "location": "Bangalore, India",
+      "highlights": [
+        "Automated device-usage tracking, reducing billing time from 7 days to under an hour",
+        "Analyzed inconsistent logs and built anomaly-detection systems and state machines to track device states",
+        "Modeled hierarchical director logs with MongoDB and Python and surfaced insights via Prometheus/Grafana",
+        "Built services with Flask and FastAPI and deployed using Docker / Docker Compose"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Enterprise Network Lab",
+      "tech": "STP, DHCP, EIGRP, RIP, Wireshark, Wireless, VLANs",
+      "period": "Sept 2025 – Present",
+      "description": [
+        "Built fault-tolerant Cisco enterprise networks with VLANs, trunking, STP/RSTP, and HSRP for redundancy",
+        "Configured wireless LANs, DHCP, NAT/PAT, and inter-VLAN routing for Internet and internal connectivity",
+        "Implemented RIP, EIGRP, and OSPF multi-area routing with redistribution and convergence tuning",
+        "Validated network behavior using Wireshark, ping/trace, and IOS tools for routing and failover"
+      ]
+    },
+    {
+      "name": "Advanced Enterprise Networks",
+      "tech": "OSPF, RSVP-TE, MPLS, IPsec, NAT, IPv6",
+      "period": "Fall 2025",
+      "description": [
+        "Designed multi-site enterprise and ISP-style networks with MPLS and RSVP-TE tunnels and bandwidth guarantees",
+        "Integrated IPv4/IPv6 connectivity with IPsec-encrypted tunnels and OSPFv2/v3 routing",
+        "Configured NAT, stateful NAT, and IPv4–IPv6 translation (NAT-PT) where required",
+        "Ensured fault tolerance, redundancy, and secure communication across multiple sites"
+      ]
+    },
+    {
+      "name": "Network Applications",
+      "tech": "C++, Network Programming",
+      "period": "Sept 2025 – Present",
+      "description": [
+        "Built a multi-threaded TCP/UDP HTTP web server and HTTP caching proxy in C/C++ with request parsing and hostname validation",
+        "Implemented persistent connections, pipelining, MD5-based page caching, and reliable UDP transfers (Stop-and-Wait, Go-Back-N)",
+        "Added concurrent request processing via threading/forking, background prefetching, and MD5 hash-based caching",
+        "Developed a DFS in C with chunking, redundancy, and client/server commands (list/get/put)"
+      ]
+    },
+    {
+      "name": "Home Lab",
+      "tech": "Linux, Virtualization, WireGuard, Docker, Cloudflare",
+      "period": "Sept 2025 – Present",
+      "description": [
+        "Maintain a home lab (https://index.dheerajg.me) hosting multiple services with WireGuard access and Docker-based deployments",
+        "Use backups and virtualization to ensure redundancy and safe experimentation"
+      ]
+    }
+  ],
+  "skills": {
+    "Concepts and protocols": ["TCP/IP", "IPv4", "IPv6", "ARP", "ICMP", "STP", "DNS", "DHCP", "NAT", "RIP", "OSPF", "SNMP", "MPLS", "GNS3"],
+    "Languages": ["GoLang", "Python", "C/C++", "SQL (Postgres)", "Bash"],
+    "Frameworks & Database": ["Flask", "FastAPI", "Postgres", "BigQuery", "Cassandra", "MongoDB", "Prometheus", "Firebase"],
+    "Developer Tools": ["Git", "Docker", "Docker Compose", "Kubernetes", "GCP", "Grafana", "AWS", "NGINX", "WireGuard"],
+    "Libraries": ["pandas", "NumPy", "Matplotlib", "TensorFlow", "OpenCV", "scikit-learn", "Seaborn", "NLTK"]
+  },
+  "education": [
+    {
+      "degree": "Master's in Computer Science — Network Engineering",
+      "school": "University of Colorado – Boulder",
+      "location": "Boulder, CO",
+      "period": "Aug 2025 – May 2027",
+      "gpa": "3.8/4.0",
+      "coursework": ["Enterprise Networks", "Network Systems","Machine Learning"]
+    },
+    {
+      "degree": "Bachelor's in Computer Science and Engineering",
+      "school": "Dayanada Sagar College of Engineering",
+      "location": "Bangalore, India",
+      "period": "Nov 2020 – May 2024",
+      "gpa": "3.76/4.0",
+      "coursework": [
+        "Data structures and algorithms",
+        "Database systems",
+        "Operating systems",
+        "Computer Networks",
+        "Cloud Computing",
+        "Automata Theory",
+        "Software Engineering",
+        "Machine Learning",
+        "Deep Learning",
+        "NLP",
+        "Computer Vision"
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Explainable AI in the context of Schizophrenia",
+      "year": "2024",
+      "description": "Presented undergrad thesis at International Conference for Advanced Data Driven Intelligence. Built Schizo AI project exploring explainable AI models."
+    },
+    {
+      "title": "Smart India Hackathon Winner",
+      "year": "2022",
+      "description": "Innovative solutions to save Court's time during hearings. Built project Tenali as backend engineer."
+    },
+    {
+      "title": "UNESCO India Africa Hackathon Finalist",
+      "year": "2023",
+      "description": "Energy flow optimization. Selected from 200 students from India. Received Best Contributors award."
+    }
+  ]
+}

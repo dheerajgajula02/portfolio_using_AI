@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Output standalone build for smaller Docker images
+  output: 'standalone',
   // Allow cross-origin requests from any IP in development
-   allowedDevOrigins: ['100.99.105.67:3000'],
+  allowedDevOrigins: ['100.99.105.67:3000'],
   async headers() {
     return [
       {

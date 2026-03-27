@@ -2,72 +2,91 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --background: #121212;
+    --surface: #1E1E1E;
+    --surface-variant: #282828;
+    --primary: #A8C7FA;
+    --primary-container: #004A77;
+    --on-primary-container: #C2E7FF;
+    --secondary: #D0BCFF;
+    --secondary-container: #4A4458;
+    --on-secondary-container: #E8DEF8;
+    --tertiary: #82C896; 
+    --text-primary: #E3E3E3;
+    --text-secondary: #C4C7C5;
+    --border: #333333;
+    --font-user: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
-}
-
-/* Theme variables and helper utilities inspired by the provided snippet */
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-
-:root {
-  --bg-primary: #ffffff;
-  --bg-secondary: #f3f4f6;
-  --bg-card: #ffffff;
-  --text-primary: #000000;
-  --text-secondary: #666666;
-  --border-color: #000000;
-  --accent-green: #98FB98;
-  --user-font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-}
-
-/* Dark theme */
-:root.dark, .dark {
-  --bg-primary: #1a1a1a;
-  --bg-secondary: #2d2d2d;
-  --bg-card: #3d3d3d;
-  --text-primary: #ffffff;
-  --text-secondary: #cccccc;
-  --border-color: #ffffff;
-  --accent-green: #4ade80;
-}
-
-body {
-  font-family: var(--user-font);
-  background-color: var(--bg-primary);
+  font-family: var(--font-user);
+  background-color: var(--background);
   color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
 }
 
-.prose { color: var(--text-primary); }
-.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6, .prose strong, .prose b { color: var(--text-primary); }
-.prose p, .prose li, .prose ul, .prose ol, .prose span, .prose blockquote, .prose code { color: var(--text-primary); }
-.prose a { color: var(--accent-green); }
-
-input, textarea, select {
-  background-color: var(--bg-card);
-  color: var(--text-primary);
-  border-color: var(--border-color);
-}
-input::placeholder, textarea::placeholder { color: var(--text-secondary); }
-
-.neo-shadow { box-shadow: 4px 4px 0px var(--border-color); }
-.neo-shadow-small { box-shadow: 2px 2px 0px var(--border-color); }
-.line-clamp-3 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+/* Material You style smooth transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.3s cubic-bezier(0.2, 0, 0, 1);
 }
 
-/* Utility to style cards consistently */
-.card {
-  background-color: var(--bg-card);
-  color: var(--text-primary);
-  border: 2px solid var(--border-color);
-  padding: 1rem;
-  border-radius: 0.5rem;
+/* Base interactive elements */
+a {
+  color: var(--primary);
+  text-decoration: none;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
+/* Remove old neo-brutal classes */
+.neo-shadow {
+  /* Replaced by soft elevation */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.24);
+}
+.neo-shadow:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+}
+
+/* Custom Utilities for Material You feel */
+@layer utilities {
+  .bg-material-surface {
+    background-color: var(--surface);
+  }
+  .bg-material-surface-variant {
+    background-color: var(--surface-variant);
+  }
+  .text-material-primary {
+    color: var(--primary);
+  }
+  .text-material-secondary {
+    color: var(--secondary);
+  }
+  .text-material-tertiary {
+    color: var(--tertiary);
+  }
+  .border-material {
+    border-color: var(--border);
+  }
+  .rounded-material {
+    border-radius: 1.25rem; /* 20px */
+  }
+  .rounded-material-lg {
+    border-radius: 1.75rem; /* 28px */
+  }
+  .material-elevation-1 {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5), 0 1px 2px rgba(0,0,0,0.3);
+  }
+  .material-elevation-2 {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5), 0 2px 4px rgba(0,0,0,0.3);
+  }
+  .material-elevation-3 {
+    box-shadow: 0 10px 15px rgba(0,0,0,0.6), 0 4px 6px rgba(0,0,0,0.4);
+  }
+}
