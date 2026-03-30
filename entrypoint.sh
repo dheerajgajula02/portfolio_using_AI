@@ -1,32 +1,36 @@
 #!/bin/sh
-# Entrypoint to run both Next.js (standalone) and a static server for /index
-# Starts Next on port 3010 and serves the static site on port 8080
+# Starts all active apps in parallel.
+# Add new apps by following the pattern below.
 
 set -e
 
-# Start Next.js standalone server in background
-echo "Starting Next.js on port 3010..."
-node server.js &
-NEXT_PID=$!
+# ── portfolio (Next.js standalone) — port 3010 ────────────────────────────────
+echo "[portfolio] Starting on port 3010..."
+PORT=3010 node /apps/portfolio/server.js &
+PORTFOLIO_PID=$!
 
-# Start static server for the `index` folder on port 8080
-echo "Starting static server for /index on port 8080..."
-http-server /app/index -p 8080 &
-STATIC_PID=$!
+# ── hub (static homelab projects hub) — port 8080 ────────────────────────────
+echo "[hub] Starting on port 8080..."
+http-server /apps/hub -p 8080 --silent &
+HUB_PID=$!
 
-# Wait for either process to exit
-wait -n ${NEXT_PID} ${STATIC_PID}
+# ── site3 (placeholder) — port 3011 ──────────────────────────────────────────
+# echo "[site3] Starting on port 3011..."
+# PORT=3011 node /apps/site3/server.js &
+# SITE3_PID=$!
 
-# If we get here, one process exited — propagate its exit code
-exit_code=0
-if [ -n "${NEXT_PID}" ]; then
-  if ! kill -0 ${NEXT_PID} 2>/dev/null; then
-    wait ${NEXT_PID} || exit_code=$?
-  fi
-fi
-if [ -n "${STATIC_PID}" ]; then
-  if ! kill -0 ${STATIC_PID} 2>/dev/null; then
-    wait ${STATIC_PID} || exit_code=$?
-  fi
-fi
-exit ${exit_code}
+# ── site4 (placeholder) — port 3012 ──────────────────────────────────────────
+# echo "[site4] Starting on port 3012..."
+# PORT=3012 node /apps/site4/server.js &
+# SITE4_PID=$!
+
+# ── Health check: log when services are up ────────────────────────────────────
+sleep 2
+echo "[entrypoint] All services started. PIDs: portfolio=${PORTFOLIO_PID} hub=${HUB_PID}"
+
+# Wait for any process to exit and propagate its exit code
+wait -n ${PORTFOLIO_PID} ${HUB_PID}
+EXIT_CODE=$?
+
+echo "[entrypoint] A service exited with code ${EXIT_CODE}. Shutting down."
+exit ${EXIT_CODE}

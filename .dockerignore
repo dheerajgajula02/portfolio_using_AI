@@ -1,6 +1,7 @@
 # Ignore files that shouldn't be sent to the Docker build context
 node_modules
-.next
+portfolio/node_modules
+portfolio/.next
 .git
 Dockerfile
 docker-compose.yml

@@ -16,6 +16,17 @@
     "aboutMe": "I am a dedicated Network and Software Engineer specializing in scalable enterprise network design, backend platform engineering, and comprehensive automation. Leveraging extensive hands-on experience, I design fault-tolerant systems and robust protocols alongside creating modern, concurrent, microservice-based software. I am highly passionate about solving complex bridging problems, optimizing traffic paths across the web, and developing responsive systems that seamlessly support highly distributed infrastructure. Drawing from both standard OSI modeling and robust software logic, I constantly try to merge system efficiency with modern engineering standards to build reliable digital foundations."
   },
   "experience": [
+
+    {
+      "title": "Software & Network Engineer intern (incoming)",
+      "company": "Meta",
+      "period": "may 2026 - Aug 2026",
+      "location": "Menlo Park, CA",
+      "highlights": [
+        "Will be interning on the Network Infrastructure team, working on building and optimizing Meta's global network infrastructure and services"
+        ]
+
+    },
     {
       "title": "Software Engineer – 1",
       "company": "Versa Networks",
