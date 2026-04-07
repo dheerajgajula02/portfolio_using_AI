@@ -52,7 +52,7 @@ export default function Home() {
             </a>
           ))}
           <a
-            href={personalInfo.resumeLink}
+            href="/api/download-resume"
             target="_blank"
             rel="noopener noreferrer"
             download
